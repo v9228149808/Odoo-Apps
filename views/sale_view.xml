@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_order_form_inherit_multi" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.multi</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']" position="before">
+                    <button string="Add Multi Products" type="object" name="open_multi_products_wizard" invisible='1'/>
+                </xpath>
+                <xpath expr="//page[@name='order_lines']//tree/control/create" position="after">
+                    <create string="Add Multi Products" context="{'is_multi_products_wizard': True}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

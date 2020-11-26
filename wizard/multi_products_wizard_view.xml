@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="add_multi_products_wizard_form" model="ir.ui.view">
+            <field name="name">multi.products.wizard.form.list</field>
+            <field name="model">multi.products.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Product | ADD Multi">
+                    <group>
+                        <field name="product_ids">
+                            <tree>
+                                <field name="default_code"/>
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <footer>
+                        <button name="add_multipal_products" string="Add Multipal" type="object"
+                                class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_open_multi_products_wizard" model="ir.actions.act_window">
+            <field name="name">Add Multipal Products</field>
+            <field name="res_model">multi.products.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>
