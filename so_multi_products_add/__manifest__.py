@@ -20,6 +20,9 @@
         'views/sale_view.xml',
         'wizard/multi_products_wizard_view.xml',
     ],
+    'images': [
+        'static/description/scrnli_30_11_2020_11-07-28.png',
+    ],
     'demo': [
     ],
     "currency": 'EUR',
