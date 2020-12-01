@@ -21,7 +21,7 @@
         'wizard/multi_products_wizard_view.xml',
     ],
     'images': [
-        'static/description/002.png',
+        'static/description/images/logo.png',
     ],
     'demo': [
     ],
